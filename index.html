@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Machine Timer</title>
+	<!-- <link rel="stylesheet" href="ds_digital/DS-DIGI.TTF"> -->
+	<link rel="stylesheet" href="tmt-styles.css">
+</head>
+<body>
+	<div class="timer-container">
+		<div class="timer1-wrapper">
+			<div class="top">
+				<div id="nav-container">
+					<div id="for-absolute">
+						<div id="topleft" onclick="movetl()"></div>
+						<div id="topright" onclick="movetr()"></div>
+						<div id="bottomleft" onclick="movebl()"></div>
+						<div id="bottomright" onclick="movebr()"></div>
+					</div>
+				</div>
+				<div class="month-container">
+					<div class="small-text">Month</div>
+					<span contenteditable="" id="editMonth">Jan</span>
+				</div>
+				<div class="day-container">
+					<div class="small-text">Day</div>
+					<span contenteditable="" id="editDay">00</span>
+				</div>
+				<div class="year-container">
+					<div class="small-text">Year</div>
+					<span contenteditable="" id="editYear">0000</span>
+				</div>
+				<div class="hour-wrapper">
+					<div class="small-text">Hour</div>
+					<span contenteditable="" id="editHour">00</span>
+				</div>
+				<div class="min-wrapper">
+					<div class="small-text">Min</div>
+					<span contenteditable="" id="editMin">00</span>
+				</div>
+				<div class="sec-wrapper">
+					<div class="small-text">Sec</div>
+					<span contenteditable="" id="editSec">00</span>
+				</div>
+			</div>
+			<div class="what-am-i">Destination Time</div>
+		</div>
+		<div class="timer2-wrapper">
+			<div class="bottom">
+				<div class="month-container">
+					<div class="small-text">Month</div>
+					<span id="month-timer">00</span>
+				</div>
+				<div class="day-container">
+					<div class="small-text">Day</div>
+					<span id="day-timer">00</span>
+				</div>
+				<div class="year-container">
+					<div class="small-text">Year</div>
+					<span id="year-timer">0000</span>
+				</div>
+				<div class="hour-wrapper">
+					<div class="small-text">Hour</div>
+					<span id="hour-timer">00</span>
+				</div>
+				<div class="min-wrapper">
+					<div class="small-text">Min</div>
+					<span id="min-timer">00</span>
+				</div>
+				<div class="sec-wrapper">
+					<div class="small-text">Sec</div>
+					<span class="sec-timer">00</span>
+				</div>
+				<div class="pause">
+					<div class="small-text smaller-one">CntDwn</div>
+					<div class="pause-btn" onclick="clickMe()"></div>
+				</div>
+			</div>
+			<div class="what-am-i">Timer</div>
+		</div>
+		<div class="timer3-wrapper" id="pause-toggle">
+			<div class="middle">
+				<div class="month-conatiner">
+					<div class="small-text">Month</div>
+					<span class="month">Jan</span>
+				</div>
+				<div class="day-container">
+					<div class="small-text">Day</div>
+					<span class="day">00</span>
+				</div>
+				<div class="year-container">
+					<div class="small-text">Year</div>
+					<span class="year">0000</span>
+				</div>
+				<div class="hour-wrapper">
+					<div class="small-text">Hour</div>
+					<span class="hour">00</span>
+				</div>
+				<div class="min-wrapper">
+					<div class="small-text">Min</div>
+					<span class="min">00</span>
+				</div>
+				<div class="sec-wrapper">
+					<div class="small-text">Sec</div>
+					<span class="sec">00</span>
+				</div>
+				<div class="pause">
+					<div class="small-text smaller-one">Pause</div>
+					<div class="pause-btn" onclick="toggle();"></div>
+				</div>
+			</div>
+			<div class="what-am-i">Present Time</div>
+		</div>
+		<div class="timer3-wrapper" id="pause-toggle-paused">
+			<div class="middle">
+				<div class="month-conatiner">
+					<div class="small-text">Month</div>
+					<span class="month">Jan</span>
+				</div>
+				<div class="day-container">
+					<div class="small-text">Day</div>
+					<span class="day">00</span>
+				</div>
+				<div class="year-container">
+					<div class="small-text">Year</div>
+					<span class="year">0000</span>
+				</div>
+				<div class="hour-wrapper">
+					<div class="small-text">Hour</div>
+					<span class="hour">00</span>
+				</div>
+				<div class="min-wrapper">
+					<div class="small-text">Min</div>
+					<span class="min">00</span>
+				</div>
+				<div class="sec-wrapper">
+					<div class="small-text">Sec</div>
+					<span class="sec">00</span>
+				</div>
+				<div class="pause">
+					<div class="small-text smaller-one">Pause</div>
+					<div class="pause-btn" onclick="toggle();"></div>
+				</div>
+			</div>
+			<div class="what-am-i">Paused Time</div>
+		</div>
+	</div>
+<script type="text/javascript" src="tmt-scripts.js"></script>
+</body>
+</html>

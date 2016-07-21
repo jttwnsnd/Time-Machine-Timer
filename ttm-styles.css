@@ -1,0 +1,13 @@
+.timer-container > div{
+	text-align: center;
+}
+
+.timer1-wrapper > div > div, .timer2-wrapper > div > div, .timer3-wrapper > div >div{
+	display: inline-block;
+	text-align: center;
+	padding: 5px 15px;
+}
+
+.small-text > div{
+	background-color: #9A0000;
+}
