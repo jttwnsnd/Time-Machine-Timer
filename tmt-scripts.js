@@ -156,8 +156,8 @@ function updateClock(){
 	d = Date.now();
 	d /= 1000;
 	var theSec = Math.floor(d % 60);
-	var theMin = Math.floor((d / minutes) % 60);
-	var theHour = Math.floor((d/ hours) % 60);
+	var theMin = Math.floor((((d % 31536000) % 86400) % 3600) / 60);
+	var theHour = Math.floor(((d % 31536000) % 86400) / 3600);
 	// corrects time zone
 	theHour -= 4;
 	var theDay = a.getDate();
@@ -177,7 +177,7 @@ function pause(){
 
 	pauseSeconds.innerHTML = a.getSeconds();
 	pauseMinutes.innerHTML = a.getMinutes();
-	pauseHours.innerHTML = a.getHours() - 12;
+	pauseHours.innerHTML = a.getHours();
 	pauseDays.innerHTML = a.getDate();
 	pauseMonth.innerHTML = monthList[a.getMonth()];
 	pauseYear.innerHTML = a.getFullYear();
