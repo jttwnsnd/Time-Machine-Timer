@@ -65,7 +65,8 @@ var secondsInAYear = secondsInAMonth * 365;
 var toggleTemp = 0;
 var toggleCountdown = 1;
 
-// this constatntly checks the month value
+// this determines if alarm will go off.
+var alarm = false;
 
 
 
@@ -137,7 +138,13 @@ function countdown(){
 	countdownDay.innerHTML = days.toString();
 	countdownMonth.innerHTML = months.toString();
 	countdownYear.innerHTML = years.toString();
+
+	if((createCountdown - now) === 0){
+		alarm = true;
+		alert('Yay!');
+	}
 }
+
 
 // toggles countdown
 function clickMe(){
@@ -220,6 +227,8 @@ function movebr(){
 	movingIt.style.right = "0";
 }
 
-setInterval(countdown, 1000);
+if(!alarm){
+	setInterval(countdown, 1000);
+}
 // setInterval(countdown, 1000);
 setInterval(updateClock, 1000);
