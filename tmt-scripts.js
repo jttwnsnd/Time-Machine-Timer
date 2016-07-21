@@ -115,7 +115,6 @@ function placeCountdown() {
 
 	userInput = (monthShort + " " + userInputDay + "," + userInputYear + " " + userInputHour + ":" + userInputMin + ":" + userInputSec).toString();
 	createCountdown = new Date(userInput).getTime();
-	console.log(createCountdown);
 }
 
 function countdown(){
@@ -138,8 +137,6 @@ function countdown(){
 	countdownDay.innerHTML = days.toString();
 	countdownMonth.innerHTML = months.toString();
 	countdownYear.innerHTML = years.toString();
-
-	console.log(destination);
 }
 
 // toggles countdown
@@ -152,7 +149,6 @@ function clickMe(){
 	}
 	placeCountdown();
 	countdown();
-	console.log(userInput);
 }
 
 function updateClock(){
@@ -223,10 +219,7 @@ function movebr(){
 	movingIt.style.bottom = "0";
 	movingIt.style.right = "0";
 }
-if( toggleTemp === 1){
-	setInterval(countdown, 1000);
-}
+
+setInterval(countdown, 1000);
 // setInterval(countdown, 1000);
 setInterval(updateClock, 1000);
-
-console.log(togglePause.style.display);

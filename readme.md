@@ -7,5 +7,6 @@ This is my "Time Machine Counter". It can move from corner to corner of the cree
 JavaScript
 HTML/CSS
 User Input Countdown Creater
+Buttons to Pause, Move The Timers, and Initate Countdown
 Time Pause
 HUD Change
